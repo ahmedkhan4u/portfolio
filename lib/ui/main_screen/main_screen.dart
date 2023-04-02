@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/main_screen/main_screen_vm.dart';
+import 'package:portfolio/ui/sections/header/header.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -21,14 +22,22 @@ class MainScreen extends StatelessWidget {
           ListTile(title: Text("Home"), leading: Icon(Icons.home),)
         ],
       ),),
-      body: ScreenTypeLayout.builder(
-      mobile: (BuildContext context) => Container(color:Colors.blue),
-      tablet: (BuildContext context) => Container(color:Colors.yellow),
-      desktop: (BuildContext context) => Container(color:Colors.red, child: Center(child: 
-      IconButton(onPressed: (() {
-        vm.globalKey.currentState!.openDrawer();
-      }),icon:Icon(Icons.menu),)),),
-    ),
+
+      body: Column(
+        children: [
+          Expanded( flex: 1, child: Header()),
+          Expanded( flex: 9, child: Container(color: Colors.white,)),
+          Expanded( flex: 1, child: Container(color: Colors.blue,)),
+        ],
+      )
+    //   body: ScreenTypeLayout.builder(
+    //   mobile: (BuildContext context) => Container(color:Colors.blue),
+    //   tablet: (BuildContext context) => Container(color:Colors.yellow),
+    //   desktop: (BuildContext context) => Container(color:Colors.red, child: Center(child: 
+    //   IconButton(onPressed: (() {
+    //     vm.globalKey.currentState!.openDrawer();
+    //   }),icon:Icon(Icons.menu),)),),
+    // ),
     );
     },),);
     

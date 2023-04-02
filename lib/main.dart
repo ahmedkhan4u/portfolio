@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/main_screen/main_screen.dart';
+import 'package:portfolio/ui/main_screen/main_screen_vm.dart';
+import 'package:provider/provider.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home:MainScreen(),);
+    return ResponsiveSizer(
+      builder: (context, orientation, screenType) => MaterialApp(home:
+      MultiProvider(
+        providers: [
+          ChangeNotifierProvider<MainScreenVM>(create: (context) => MainScreenVM(),)
+        ],
+        child: const MainScreen()),
+       debugShowCheckedModeBanner: false,),
+    );
   }
 }
