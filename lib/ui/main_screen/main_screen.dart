@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/constants/constans.dart';
+import 'package:portfolio/core/styles/text_styles.dart';
 import 'package:portfolio/ui/main_screen/main_screen_vm.dart';
 import 'package:portfolio/ui/sections/body/about_screen/about_screen.dart';
 import 'package:portfolio/ui/sections/body/contact_screen/contact_screen.dart';
@@ -8,7 +10,7 @@ import 'package:portfolio/ui/sections/body/resume_screen/resume_screen.dart';
 import 'package:portfolio/ui/sections/body/services_screen/services_screen.dart';
 import 'package:portfolio/ui/sections/header/header.dart';
 import 'package:provider/provider.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 
 class MainScreen extends StatelessWidget {
@@ -24,8 +26,14 @@ class MainScreen extends StatelessWidget {
       return Scaffold(
         key: vm.globalKey,
       drawer: Drawer(child: ListView(
-        children: const [
-          ListTile(title: Text("Home"), leading: Icon(Icons.home),)
+        children: [
+          kHeight(32.px),
+          getListItem(title: "Home", onClick: (){vm.setIndex = 0; vm.openCloseDrawer();}, icon: Icons.home),
+          getListItem(title: "About", onClick: (){vm.setIndex = 1; vm.openCloseDrawer();}, icon: Icons.info,),
+          getListItem(title: "Services", onClick: (){vm.setIndex = 2; vm.openCloseDrawer();}, icon: Icons.workspaces),
+          getListItem(title: "Projects", onClick: (){vm.setIndex = 3;vm.openCloseDrawer();}, icon: Icons.work),
+          getListItem(title: "Contact", onClick: (){vm.setIndex = 4; vm.openCloseDrawer();}, icon: Icons.phone),
+          getListItem(title: "Resume", onClick: (){vm.setIndex = 5; vm.openCloseDrawer();}, icon: Icons.toc_outlined),
         ],
       ),),
 
@@ -67,4 +75,12 @@ class MainScreen extends StatelessWidget {
         default: return const SizedBox();
       }
     }
+
+    Widget getListItem({required title, required onClick, required icon}) {
+
+      return Material(child: InkWell( onTap: onClick, child:
+       ListTile(title: Text(title, style: drawerListTextStyle,), 
+       leading: Icon(icon, color: Colors.blue,),)));
+    }
+
 }

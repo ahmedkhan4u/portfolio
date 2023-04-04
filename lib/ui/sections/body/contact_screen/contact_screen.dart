@@ -6,6 +6,6 @@ class ContactScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Home", style: headerTextBtnStyle,));
+    return Center(child: Text("Contact", style: headerTextBtnStyle,));
   }
 }
