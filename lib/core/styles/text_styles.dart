@@ -12,3 +12,7 @@ var drawerListTextStyle = GoogleFonts.laila(
 textStyle: TextStyle(fontSize: 18.px, fontWeight: FontWeight.w400)
 );
 
+var footerTextStyle = GoogleFonts.laila(
+textStyle: TextStyle(fontSize: 14.px, fontWeight: FontWeight.w400, color: Colors.white)
+);
+

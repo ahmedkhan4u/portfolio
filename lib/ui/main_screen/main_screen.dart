@@ -8,6 +8,7 @@ import 'package:portfolio/ui/sections/body/home_screen/home_screen.dart';
 import 'package:portfolio/ui/sections/body/projects_screen/projects_screen.dart';
 import 'package:portfolio/ui/sections/body/resume_screen/resume_screen.dart';
 import 'package:portfolio/ui/sections/body/services_screen/services_screen.dart';
+import 'package:portfolio/ui/sections/footer/footer.dart';
 import 'package:portfolio/ui/sections/header/header.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -33,7 +34,7 @@ class MainScreen extends StatelessWidget {
           getListItem(title: "Services", onClick: (){vm.setIndex = 2; vm.openCloseDrawer();}, icon: Icons.workspaces),
           getListItem(title: "Projects", onClick: (){vm.setIndex = 3;vm.openCloseDrawer();}, icon: Icons.work),
           getListItem(title: "Contact", onClick: (){vm.setIndex = 4; vm.openCloseDrawer();}, icon: Icons.phone),
-          getListItem(title: "Resume", onClick: (){vm.setIndex = 5; vm.openCloseDrawer();}, icon: Icons.toc_outlined),
+          getListItem(title: "Resume", onClick: (){vm.setIndex = 5; vm.openCloseDrawer();}, icon: Icons.file_present_sharp),
         ],
       ),),
 
@@ -41,7 +42,7 @@ class MainScreen extends StatelessWidget {
         children: [
           Expanded( flex: 1, child: Header(vm: vm,)),
           Expanded( flex: 9, child: Container(color: Colors.white, child: getScreen(vm.tabIndex),)),
-          Expanded( flex: 1, child: Container(color: Colors.blue,)),
+          Expanded( flex: 1, child: Container(color: Colors.blue, child: Footer())),
         ],
       )
     //   body: ScreenTypeLayout.builder(
