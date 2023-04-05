@@ -5,6 +5,10 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 
 var headerTextBtnStyle = GoogleFonts.laila(
-textStyle: TextStyle(color: Colors.blue, fontSize: 14.sp, fontWeight: FontWeight.w400)
+textStyle: TextStyle(color: Colors.blue, fontSize: 18.px, fontWeight: FontWeight.w400)
+);
+
+var drawerListTextStyle = GoogleFonts.laila(
+textStyle: TextStyle(fontSize: 18.px, fontWeight: FontWeight.w400)
 );
 

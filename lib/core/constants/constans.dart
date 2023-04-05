@@ -10,5 +10,12 @@ import 'package:responsive_sizer/responsive_sizer.dart';
    const kWidth32 = SizedBox(width: 32);
 
 
+   const kHeight32 = SizedBox(height: 32);
+
+   dynamic kHeight (h) => SizedBox(height: h);
+
+
+
+
 
 
