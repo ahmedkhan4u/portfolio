@@ -12,6 +12,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Container(
+      //color: Colors.black87,
         padding: EdgeInsets.symmetric(horizontal: 24),
          child: sWidth(context) < 800 
          ? 

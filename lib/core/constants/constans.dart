@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
-
 
    double sWidth(c) => MediaQuery.of(c).size.width;
    double sHeight(c) => MediaQuery.of(c).size.height;
@@ -13,6 +11,8 @@ import 'package:responsive_sizer/responsive_sizer.dart';
    const kHeight32 = SizedBox(height: 32);
 
    dynamic kHeight (h) => SizedBox(height: h);
+   dynamic kWidth (w) => SizedBox(width: w);
+
 
 
 
