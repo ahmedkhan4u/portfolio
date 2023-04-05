@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/constans.dart';
+import 'package:portfolio/core/styles/colors.dart';
 import 'package:portfolio/core/styles/text_styles.dart';
 import 'package:portfolio/ui/main_screen/main_screen_vm.dart';
 import 'package:portfolio/ui/sections/body/about_screen/about_screen.dart';
@@ -42,17 +43,9 @@ class MainScreen extends StatelessWidget {
         children: [
           Expanded( flex: 1, child: Header(vm: vm,)),
           Expanded( flex: 9, child: Container(color: Colors.white, child: getScreen(vm.tabIndex),)),
-          Expanded( flex: 1, child: Container(color: Colors.blue, child: Footer())),
+          Expanded( flex: 1, child: Container(color: footerColor, child: Footer())),
         ],
       )
-    //   body: ScreenTypeLayout.builder(
-    //   mobile: (BuildContext context) => Container(color:Colors.blue),
-    //   tablet: (BuildContext context) => Container(color:Colors.yellow),
-    //   desktop: (BuildContext context) => Container(color:Colors.red, child: Center(child: 
-    //   IconButton(onPressed: (() {
-    //     vm.globalKey.currentState!.openDrawer();
-    //   }),icon:Icon(Icons.menu),)),),
-    // ),
     );
     },),); 
 
