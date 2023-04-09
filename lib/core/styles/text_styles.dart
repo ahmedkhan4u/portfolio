@@ -21,6 +21,10 @@ var normalTextStyle = GoogleFonts.robotoMono(
 textStyle: TextStyle(fontSize: 14.px, fontWeight: FontWeight.w400, color: whiteColor)
 );
 
+var aboutTextStyle = GoogleFonts.abel(
+textStyle: TextStyle(fontSize: 20.px, fontWeight: FontWeight.w400, color: whiteColor)
+);
+
 var nameTextStyleHome = GoogleFonts.abel(
 textStyle: TextStyle(fontSize: 14.px, fontWeight: FontWeight.w400, color: whiteColor)
 );

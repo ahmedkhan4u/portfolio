@@ -3,8 +3,10 @@ import 'package:portfolio/ui/main_screen/main_screen.dart';
 import 'package:portfolio/ui/main_screen/main_screen_vm.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const MyApp());
 }
 
