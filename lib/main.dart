@@ -16,13 +16,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveSizer(
-      builder: (context, orientation, screenType) => MaterialApp(home:
-      MultiProvider(
-        providers: [
-          ChangeNotifierProvider<MainScreenVM>(create: (context) => MainScreenVM(),)
-        ],
-        child: const MainScreen()),
-       debugShowCheckedModeBanner: false,),
+      builder: (context, orientation, screenType) => MaterialApp(
+        home: MultiProvider(providers: [
+          ChangeNotifierProvider<MainScreenVM>(
+            create: (context) => MainScreenVM(),
+          )
+        ], child: const MainScreen()),
+        debugShowCheckedModeBanner: false,
+      ),
     );
   }
 }

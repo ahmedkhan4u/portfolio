@@ -24,6 +24,9 @@ textStyle: TextStyle(fontSize: 14.px, fontWeight: FontWeight.w400, color: whiteC
 var aboutTextStyle = GoogleFonts.abel(
 textStyle: TextStyle(fontSize: 20.px, fontWeight: FontWeight.w400, color: whiteColor)
 );
+var servicesTextStyle = GoogleFonts.abel(
+textStyle: TextStyle(fontSize: 20.px, fontWeight: FontWeight.w400, color: whiteColor)
+);
 
 var nameTextStyleHome = GoogleFonts.abel(
 textStyle: TextStyle(fontSize: 14.px, fontWeight: FontWeight.w400, color: whiteColor)

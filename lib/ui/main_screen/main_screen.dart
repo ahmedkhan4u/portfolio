@@ -43,7 +43,7 @@ class MainScreen extends StatelessWidget {
         children: [
           Expanded( flex: 1, child: Header(vm: vm,)),
           Expanded( flex: 9, child: Container(color: Colors.white, child: getScreen(vm.tabIndex),)),
-          Expanded( flex: 1, child: Container(color: footerColor, child: Footer())),
+          Expanded( flex: 1, child: Container(color: footerColor, child: const Footer())),
         ],
       )
     );
