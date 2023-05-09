@@ -4,8 +4,8 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 class ImageContainer extends StatelessWidget {
 
   String? imagePath;
-
-  ImageContainer({super.key, this.imagePath});
+  Color? color;
+  ImageContainer({super.key, this.imagePath, this.color = Colors.black});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,9 @@ class ImageContainer extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                       boxShadow: const [
                         BoxShadow(
-                            offset: Offset(2, 2), blurRadius: 2, spreadRadius: 2, color: Colors.blueGrey)
+                            offset: Offset(2, 2), blurRadius: 2, spreadRadius: 2, color: Color.fromARGB(255, 182, 182, 182))
                       ]),
-                  child: Image.asset(imagePath!, color: Colors.black,fit: BoxFit.contain,)
+                  child: Image.asset(imagePath!, color: color,fit: BoxFit.contain,)
                 );
   }
 }
