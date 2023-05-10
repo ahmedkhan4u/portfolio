@@ -38,11 +38,11 @@ class ServicesScreen extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ImageContainer(imagePath: "assets/images/img_android.png",),
+                ImageContainer(imagePath: "assets/images/img_android.png", color: Colors.green,),
                 kWidth24,
-                ImageContainer(imagePath: "assets/images/img_ios2.png",),
+                ImageContainer(imagePath: "assets/images/img_ios2.png", color: Colors.black,),
                 kWidth24,
-                ImageContainer(imagePath: "assets/images/img_web.png",)
+                ImageContainer(imagePath: "assets/images/img_web.png", color: Colors.blue,)
               ],
             ),
           )
@@ -70,11 +70,11 @@ class ServicesScreen extends StatelessWidget {
               //mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ImageContainer(imagePath: "assets/images/img_android.png",),
+                ImageContainer(imagePath: "assets/images/img_android.png", color: Colors.green,),
                 kHeight24,
-                ImageContainer(imagePath: "assets/images/img_ios2.png",),
+                ImageContainer(imagePath: "assets/images/img_ios2.png", color: Colors.black,),
                 kHeight24,
-                ImageContainer(imagePath: "assets/images/img_web.png",)
+                ImageContainer(imagePath: "assets/images/img_web.png", color: Colors.blue,)
               ],
             ),
           )
