@@ -7,7 +7,9 @@ class ResumeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-          child: SfPdfViewer.asset('assets/my_cv.pdf'));
+    return SfPdfViewer.asset(
+      'assets/my_cv.pdf', onPageChanged: (index) {
+      print(index.newPageNumber);
+    },);
   }
 }

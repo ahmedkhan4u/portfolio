@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider<MainScreenVM>(
             create: (context) => MainScreenVM(),
           )
-        ], child: const MainScreen()),
+        ], child: MainScreen()),
         debugShowCheckedModeBanner: false,
       ),
     );

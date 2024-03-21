@@ -14,10 +14,9 @@ import 'package:portfolio/ui/sections/header/header.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-
 class MainScreen extends StatelessWidget {
 
-  const MainScreen({super.key});
+  MainScreen({super.key});
 
 
   @override
@@ -50,7 +49,6 @@ class MainScreen extends StatelessWidget {
     },),); 
 
   }
-
   Widget getScreen(index) {
       
       switch(index) {
